@@ -12,7 +12,7 @@ if __name__ == '__main__':
     pdf.add_font("Sans", style="I", fname="C:/Fonts/NotoSans-Italic.ttf", uni=True)
     pdf.add_font("Sans", style="BI", fname="C:/Fonts/NotoSans-BoldItalic.ttf", uni=True)
 
-    df = pd.read_excel('test.xlsx', index_col=0, sheet_name='Sheet1')
+    df = pd.read_excel('УК Любимый город.xlsx', index_col=0, sheet_name='Лист1')
     pd.options.display.expand_frame_repr = False
     pd.set_option('display.max_columns', 6)
     pd.set_option('display.max_colwidth', 30)
@@ -45,7 +45,7 @@ if __name__ == '__main__':
             pdf.cell(190, 7, '', border='T', ln=0, align='C')
             pdf.ln()
 
-            pdf.set_font("Sans", "B", 16)
+            pdf.set_font("Sans", "B", 13)
             pdf.cell(190, 7, "Уважаемый Собственник!", ln=20, align='C' )
             pdf.ln()
 
@@ -65,7 +65,7 @@ if __name__ == '__main__':
             pdf.multi_cell(190, 7, txt1)
             pdf.ln(12)
 
-            pdf.set_font("Sans", "B", 13)
+            pdf.set_font("Sans", "B", 12)
             pdf.multi_cell(190, 7, "С целью защиты Ваших прав и законных интересов Вам необходимо "
                              "зарегистрировать право собственности на принадлежащую Вам квартиру в ЕГРН!", align='C')
             pdf.ln(12)
@@ -75,10 +75,10 @@ if __name__ == '__main__':
             pdf.ln(2)
 
             pdf.set_font("Sans", "", 11)
-            pdf.cell(190, 7, "По вопросам Вы можете обращаться по телефону:")
+            pdf.cell(190, 7, "По всем вопросам Вы можете обращаться по телефону:")
             pdf.ln()
-            pdf.cell(190, 7, "00-00-00, Управление по учету и приватизации жилых помещений")
-            pdf.ln(14)
+            pdf.cell(190, 7, "8 (3843) 45-86-73, Новокузнецкий отдел Управления Росреестра по Кемеровской области")
+            pdf.ln(20)
 
             pdf.cell(190, 7, "Администрация города Новокузнецка", align='R')
             pdf.ln()
@@ -87,5 +87,5 @@ if __name__ == '__main__':
             pdf.cell(190, 7, upr_komp, align='R')
             pdf.ln()
 
-    pdf.output("test.pdf")
-    os.startfile("test.pdf")
+    pdf.output("УК Любимый город.pdf")
+    os.startfile("УК Любимый город.pdf")
