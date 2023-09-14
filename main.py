@@ -12,7 +12,7 @@ if __name__ == '__main__':
     pdf.add_font("Sans", style="I", fname="C:/Fonts/NotoSans-Italic.ttf", uni=True)
     pdf.add_font("Sans", style="BI", fname="C:/Fonts/NotoSans-BoldItalic.ttf", uni=True)
 
-    df = pd.read_excel('УК Любимый город.xlsx', index_col=0, sheet_name='Лист1')
+    df = pd.read_excel('test.xlsx', index_col=0, sheet_name='Sheet1')
     pd.options.display.expand_frame_repr = False
     pd.set_option('display.max_columns', 6)
     pd.set_option('display.max_colwidth', 30)
@@ -59,16 +59,16 @@ if __name__ == '__main__':
 
             pdf.set_font("Sans", "", 11)
             pdf.cell(190, 7, "не зарегистрировано в Едином государственном реестре недвижимости (далее - ЕГРН).")
-            pdf.ln(12)
+            pdf.ln(10)
 
             pdf.set_font("Sans", "", 11)
             pdf.multi_cell(190, 7, txt1)
-            pdf.ln(12)
+            pdf.ln(10)
 
             pdf.set_font("Sans", "B", 12)
             pdf.multi_cell(190, 7, "С целью защиты Ваших прав и законных интересов Вам необходимо "
                              "зарегистрировать право собственности на принадлежащую Вам квартиру в ЕГРН!", align='C')
-            pdf.ln(12)
+            pdf.ln(10)
 
             pdf.set_font("Sans", "", 11)
             pdf.multi_cell(190, 7, txt2)
@@ -87,5 +87,5 @@ if __name__ == '__main__':
             pdf.cell(190, 7, upr_komp, align='R')
             pdf.ln()
 
-    pdf.output("УК Любимый город.pdf")
-    os.startfile("УК Любимый город.pdf")
+    pdf.output("Инком-С(доп).pdf")
+    os.startfile("Инком-С(доп).pdf")
