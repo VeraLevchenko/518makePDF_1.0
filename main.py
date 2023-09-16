@@ -24,7 +24,9 @@ if __name__ == '__main__':
 
     for i in range(0, len(df.index)):
         print(f"{i}из{len(df.index)}")
-        if str(df.iloc[i]['Сыскин']) == 'нет' and str(df.iloc[i]['Управляющая компания']) != 'nan':
+        if str(df.iloc[i]['Сыскин1']) == 'нет' \
+                and str(df.iloc[i]['Сыскин2']) == 'нет' \
+                and str(df.iloc[i]['Управляющая компания']) != 'nan':
             adres = str(df.iloc[i]['Структурированный адрес'])
             upr_komp = str(df.iloc[i]['Управляющая компания'])
                 # добавляем пустую страницу
@@ -87,5 +89,5 @@ if __name__ == '__main__':
             pdf.cell(190, 7, upr_komp, align='R')
             pdf.ln()
 
-    pdf.output("Инком-С(доп).pdf")
-    os.startfile("Инком-С(доп).pdf")
+    pdf.output("Уведомления\Жилищно - эксплуатационное управление - 5.pdf")
+    os.startfile("Уведомления\Жилищно - эксплуатационное управление - 5.pdf")
